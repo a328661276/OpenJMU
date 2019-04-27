@@ -26,6 +26,15 @@ class _TestPageState extends State<TestPage> {
         ),
         title: Text("测试页", style: TextStyle(color: Colors.white)),
       ),
+      body: ListView.builder(
+        itemCount: 100,
+          itemBuilder: (BuildContext context, int index) => Container(
+            padding: EdgeInsets.all(4.0),
+            child: Center(
+                child: Text("$index", style: TextStyle(fontSize: 18.0))
+            )
+          )
+      )
     );
   }
 }
