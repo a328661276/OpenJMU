@@ -23,15 +23,15 @@ class MyInfoPage extends StatefulWidget {
 class MyInfoPageState extends State<MyInfoPage> {
   Color themeColor = ThemeUtils.currentColorTheme;
 
-//  List<String> titles = ["夜间模式", "切换主题", "退出登录", "测试页", "关于"];
-  List<String> titles = ["夜间模式", "切换主题", "退出登录", "关于"];
-//  List<IconData> icons = [Icons.invert_colors, Icons.color_lens, Icons.exit_to_app, Icons.dialpad, Icons.info];
-  List<IconData> icons = [
-    Platform.isAndroid ? Icons.brightness_medium : Ionicons.getIconData("ios-moon"),
-    Platform.isAndroid ? Icons.color_lens : Ionicons.getIconData("ios-color-palette"),
-    Platform.isAndroid ? Icons.exit_to_app : Ionicons.getIconData("ios-exit"),
-    Platform.isAndroid ? Icons.info : Ionicons.getIconData("ios-information-circle")
-  ];
+  List<String> titles = ["夜间模式", "切换主题", "退出登录", "测试页", "关于"];
+//  List<String> titles = ["夜间模式", "切换主题", "退出登录", "关于"];
+  List<IconData> icons = [Icons.invert_colors, Icons.color_lens, Icons.exit_to_app, Icons.dialpad, Icons.info];
+//  List<IconData> icons = [
+//    Platform.isAndroid ? Icons.brightness_medium : Ionicons.getIconData("ios-moon"),
+//    Platform.isAndroid ? Icons.color_lens : Ionicons.getIconData("ios-color-palette"),
+//    Platform.isAndroid ? Icons.exit_to_app : Ionicons.getIconData("ios-exit"),
+//    Platform.isAndroid ? Icons.info : Ionicons.getIconData("ios-information-circle")
+//  ];
   var userAvatar;
   var userName;
   var titleTextStyle = new TextStyle(fontSize: 16.0);
@@ -194,8 +194,8 @@ class MyInfoPageState extends State<MyInfoPage> {
     } else if (title == "切换主题") {
       Navigator.pushNamed(context, "/changeTheme");
     } else if (title == "测试页") {
-//      Navigator.pushNamed(context, "/test");
-      Navigator.pushNamed(context, "/notificationTest");
+      Navigator.pushNamed(context, "/test");
+//      Navigator.pushNamed(context, "/notificationTest");
     } else if (title == "关于") {
       showAboutDialog(context);
     }

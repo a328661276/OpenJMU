@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+
+import 'package:OpenJMU/utils/ThemeUtils.dart';
 
 class TestPage extends StatefulWidget {
   @override
@@ -14,6 +17,15 @@ class _TestPageState extends State<TestPage> {
 
   @override
   Widget build(BuildContext context) {
-    return null;
+    return PlatformScaffold(
+      appBar: PlatformAppBar(
+        backgroundColor: ThemeUtils.currentColorTheme,
+        android: (BuildContext context) => MaterialAppBarData(
+          centerTitle: true,
+          elevation: 0,
+        ),
+        title: Text("测试页", style: TextStyle(color: Colors.white)),
+      ),
+    );
   }
 }
